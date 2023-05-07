@@ -1,113 +1,165 @@
-import Image from 'next/image'
+import Image from "next/image";
+import Card from "../components/Card";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: "700",
+  variable: "--font-jakarta",
+});
+const jakarta_extraBold = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: "800",
+  variable: "--font-jakarta",
+});
+const jakarta_medium = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: "500",
+  variable: "--font-jakarta",
+});
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="relative overflow-x-hidden">
+      <div className="h-12 flex items-center justify-between mt-4 mx-4 md:mt-6 md:mx-10 lg:mx-41.25 lg:mt-11.25">
+        <Image
+          height={35}
+          width={89}
+          src={"skilled-elearning-landing-page/assets/logo-dark.svg"}
+          alt={"logo"}
+          className="lg:hidden"
+        />
+        <div
+          className={`hidden lg:block ${jakarta_extraBold.variable} font-jakarta text-4xl`}
+        >
+          skilled
+        </div>
+        <button
+          type="submit"
+          className={`${jakarta.variable} font-jakarta text-18 h-full w-35 rounded-full bg-dark-blue text-white lg:h-14 lg:w-41.75`}
+        >
+          Get Started
+        </button>
+      </div>
+      <div className="md:w-99.5">
+        <div
+          className={`${jakarta_extraBold.variable} font-jakarta mt-9.5 text-40 mx-4 md:mt-25 md:w-81.5 md:m-10 lg:mx-41.25 lg:text-56 lg:w-114.25 lg:mt-44.5`}
+        >
+          Maximize skill, minimize budget
+        </div>
+        <div
+          className={`${jakarta_medium.variable} font-jakarta mt-6.5 text-16v2 text-gray mx-4 md:ml-10 md:mr-0 lg:mx-41.25 lg:w-114.25 lg:text-18 lg:mt-7.25`}
+        >
+          Our modern courses across a range of <br className="md:hidden" />
+          in-demand skills will give you the knowledge you need to live{" "}
+          <br className="hidden lg:inline" />
+          the life you want.
+        </div>
+        <button
+          className={`${jakarta.variable} font-jakarta mt-6 h-14 w-41.75 bg-gradient-to-t from-gradient-start-a to-gradient-end-a rounded-full text-white mx-4 md:mx-10 lg:mt-10 lg:mx-41.25`}
+        >
+          Get Started
+        </button>
+      </div>
+      <Image
+        height={301}
+        width={327}
+        src={"skilled-elearning-landing-page/assets/image-hero-mobile@2x.png"}
+        alt={"hero"}
+        className="m-auto mt-11.5 md:hidden"
+      />
+
+      <Image
+        height={640}
+        width={640.71}
+        src={"skilled-elearning-landing-page/assets/image-hero-tablet@2x.webp"}
+        alt={"hero"}
+        className="hidden md:inline md:absolute md:top-pic-y md:left-pic-x lg:hidden "
+      />
+      <Image
+        height={936.92}
+        width={991.63}
+        src={"skilled-elearning-landing-page/assets/image-hero-desktop@2x.webp"}
+        alt={"hero"}
+        className="hidden lg:inline lg:absolute lg:top-pic-y-dsk left-pic-x-dsk"
+      />
+      <div className="bg-gradient-to-b from-white to-light-blue w-screen pb-20 md:pb-21.5 lg:pb-35">
+        <div className=" flex flex-col items-center md:flex-row md:mx-0 md:justify-center  md:flex-wrap md:gap-x-2.5 md:gap-y-8 md:mt-46.5 lg:mx-41.25 lg:w-277.5  ">
+          <div
+            className={`${jakarta_extraBold.variable} font-jakarta bg-gradient-to-t from-gradient-start-a to-gradient-end-a h-30 rounded-mid text-white text-24 pt-6 px-7 w-85.75 md:w-85 md:mt-6 md:h-64.75 lg:w-87.5 lg:h-80.5 lg:text-32 lg:pt-16 lg:px-8 lg:rounded-dsk`}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            Check out our most popular courses!
+          </div>
+          <Card
+            title="Animation"
+            url="skilled-elearning-landing-page/assets/icon-animation.svg"
+            font={jakarta_extraBold}
+            font2={jakarta_medium}
+            font3={jakarta}
+          >
+            Learn the latest animation techniques to create stunning motion
+            design and captivate your audience.
+          </Card>
+          <Card
+            title="Design"
+            url="skilled-elearning-landing-page/assets/icon-design.svg"
+            font={jakarta_extraBold}
+            font2={jakarta_medium}
+            font3={jakarta}
+          >
+            Create beautiful, usable interfaces to help shape the future of how
+            the web looks.
+          </Card>
+          <Card
+            title="Photography"
+            url="skilled-elearning-landing-page/assets/icon-photography.svg"
+            font={jakarta_extraBold}
+            font2={jakarta_medium}
+            font3={jakarta}
+          >
+            Explore critical fundamentals like lighting, composition, and focus
+            to capture exceptional photos.
+          </Card>
+          <Card
+            title="Crypto"
+            url="skilled-elearning-landing-page/assets/icon-crypto.svg"
+            font={jakarta_extraBold}
+            font2={jakarta_medium}
+            font3={jakarta}
+          >
+            All you need to know to get started investing in crypto. Go from
+            beginner to advanced with this 54 hour course.
+          </Card>
+          <Card
+            title="Business"
+            url="skilled-elearning-landing-page/assets/icon-business.svg"
+            font={jakarta_extraBold}
+            font2={jakarta_medium}
+            font3={jakarta}
+          >
+            A step-by-step playbook to help you start, scale, and sustain your
+            business without outside investment.
+          </Card>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
+      <footer className="h-30 bg-dark-blue  flex items-center justify-between px-4  md:px-10 lg:mt-35 lg:px-41.25">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          height={35}
+          width={89}
+          src={"skilled-elearning-landing-page/assets/logo-light.svg"}
+          alt={"logo"}
+          className="lg:hidden"
         />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+<div
+          className={`hidden lg:block ${jakarta_extraBold.variable} font-jakarta text-4xl text-white  `}
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
+          skilled
+        </div>
+        <button
+          className={`${jakarta.variable} font-jakarta bg-gradient-to-b from-gradient-start-b to-gradient-end-b rounded-full text-white h-12 w-35 lg:h-14 lg:w-41.75`}
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          Get Started
+        </button>
+      </footer>
     </main>
-  )
+  );
 }
