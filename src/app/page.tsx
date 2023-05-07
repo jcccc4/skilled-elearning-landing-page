@@ -24,7 +24,7 @@ export default function Home() {
         <Image
           height={35}
           width={89}
-          src={"skilled-elearning-landing-page/assets/logo-dark.svg"}
+          src={"/skilled-elearning-landing-page/assets/logo-dark.svg"}
           alt={"logo"}
           className="lg:hidden"
         />
@@ -63,7 +63,7 @@ export default function Home() {
       <Image
         height={301}
         width={327}
-        src={"skilled-elearning-landing-page/assets/image-hero-mobile@2x.png"}
+        src={"/skilled-elearning-landing-page/assets/image-hero-mobile@2x.png"}
         alt={"hero"}
         className="m-auto mt-11.5 md:hidden"
       />
@@ -71,14 +71,14 @@ export default function Home() {
       <Image
         height={640}
         width={640.71}
-        src={"skilled-elearning-landing-page/assets/image-hero-tablet@2x.webp"}
+        src={"/skilled-elearning-landing-page/assets/image-hero-tablet@2x.webp"}
         alt={"hero"}
         className="hidden md:inline md:absolute md:top-pic-y md:left-pic-x lg:hidden "
       />
       <Image
         height={936.92}
         width={991.63}
-        src={"skilled-elearning-landing-page/assets/image-hero-desktop@2x.webp"}
+        src={"/skilled-elearning-landing-page/assets/image-hero-desktop@2x.webp"}
         alt={"hero"}
         className="hidden lg:inline lg:absolute lg:top-pic-y-dsk left-pic-x-dsk"
       />
@@ -91,7 +91,7 @@ export default function Home() {
           </div>
           <Card
             title="Animation"
-            url="skilled-elearning-landing-page/assets/icon-animation.svg"
+            url="/skilled-elearning-landing-page/assets/icon-animation.svg"
             font={jakarta_extraBold}
             font2={jakarta_medium}
             font3={jakarta}
@@ -101,7 +101,7 @@ export default function Home() {
           </Card>
           <Card
             title="Design"
-            url="skilled-elearning-landing-page/assets/icon-design.svg"
+            url="/skilled-elearning-landing-page/assets/icon-design.svg"
             font={jakarta_extraBold}
             font2={jakarta_medium}
             font3={jakarta}
@@ -111,7 +111,7 @@ export default function Home() {
           </Card>
           <Card
             title="Photography"
-            url="skilled-elearning-landing-page/assets/icon-photography.svg"
+            url="/skilled-elearning-landing-page/assets/icon-photography.svg"
             font={jakarta_extraBold}
             font2={jakarta_medium}
             font3={jakarta}
@@ -121,7 +121,7 @@ export default function Home() {
           </Card>
           <Card
             title="Crypto"
-            url="skilled-elearning-landing-page/assets/icon-crypto.svg"
+            url="/skilled-elearning-landing-page/assets/icon-crypto.svg"
             font={jakarta_extraBold}
             font2={jakarta_medium}
             font3={jakarta}
@@ -131,7 +131,7 @@ export default function Home() {
           </Card>
           <Card
             title="Business"
-            url="skilled-elearning-landing-page/assets/icon-business.svg"
+            url="/skilled-elearning-landing-page/assets/icon-business.svg"
             font={jakarta_extraBold}
             font2={jakarta_medium}
             font3={jakarta}
@@ -145,7 +145,7 @@ export default function Home() {
         <Image
           height={35}
           width={89}
-          src={"skilled-elearning-landing-page/assets/logo-light.svg"}
+          src={"/skilled-elearning-landing-page/assets/logo-light.svg"}
           alt={"logo"}
           className="lg:hidden"
         />
